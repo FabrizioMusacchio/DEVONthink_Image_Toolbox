@@ -17,12 +17,12 @@ The scripts are written in such a way that they do not distinguish between JPG a
 ### Remark 
 It may be a bit confusing that the file extension is retained, when a TIFF or a PNG is converted into a JPG. However, any converted image file will be indeed a JPG, which can be cross-checked, e.g., in the info pane of the _Preview_ app.
 
-<div style="text-align: center;">
+<center>
 <a href="Screenshots/JPG compression 1.png"><img src="Screenshots/JPG compression 1.png" style="width: 41%;"></a>
 <a href="Screenshots/JPG compression 2.png"><img src="Screenshots/JPG compression 2.png" style="width: 49%;"></a>
 
 <b>Left</b>: The info pane of a converted TIFF in DEVONthink's inspector, that still shows the file as TIFF. <b>Right</b>: The info pane in macOS' _Preview_ app for the same file, which correctly identifies the file as a JPG.
-</div> 
+</center>
 
 
 ## Change DPI
@@ -33,12 +33,12 @@ This set of scripts changes the DPI of the selected images to a chosen value:
 * a freely entered DPI value ("**Change DPI to XY**")
 
 
-<div style="text-align: center;">
+<center>
 <a href="Screenshots/Change DPI 1.png"><img src="Screenshots/Change DPI 1.png" style="width: 49%;"></a>
 <a href="Screenshots/Change DPI 2.png"><img src="Screenshots/Change DPI 2.png" style="width: 49%;"></a>
 
 <b>Left</b>: The info pane of  JPG file with a DPI of 72 . <b>Right</b>: The info pane of the same file after a DPI conversion 90.
-</div> 
+</center>
 
 ### Remark
 As for the JPG compression scripts, this scripts do not not distinguish between JPG and other image file formats and will convert any image file into JPG (if it isn't a JPG yet).
