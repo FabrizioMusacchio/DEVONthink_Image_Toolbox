@@ -1,6 +1,9 @@
 # DEVONthink Image Toolbox
 
-This is a collection of Appelscripts for processing images in DEVONthink.
+This is a collection of Appelscripts for processing images in DEVONthink. It contains the following script sets:
+
+* [JPG compression](#jpg_compression)
+* [Change DPI](#change_dpi)
 
 
 
