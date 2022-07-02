@@ -10,10 +10,10 @@ This is a collection of Appelscripts for processing images in DEVONthink. It con
 ## JPG compression
 This set of scripts compresses the selected images to a chosen compression level:
 
-* a pre-defined level of 70% ("**JPG compress 70%**")
-* a pre-defined level of 80% ("**JPG compress 80%**")
-* a pre-defined level of 100% ("**JPG compress 100%**"), e.g., to reset any previous compression
-* a freely entered level ("**JPG compress XY%**")
+* a pre-defined level of 70% ("**JPG compress 70%.scpt**")
+* a pre-defined level of 80% ("**JPG compress 80%.scpt**")
+* a pre-defined level of 100% ("**JPG compress 100%.scpt**"), e.g., to reset any previous compression
+* a freely entered level ("**JPG compress XY%.scpt**")
 
 The scripts are written in such a way that they do not distinguish between JPG and other image file formats (PNG, TIFF, ...). Any chosen image file will be converted into JPG (if it isn't a JPG yet) and compressed to the chosen compression level. However, the original filename and file extension are retained as well as the file's `uuid` (DEVONthink's internal ID for that file, which also serves as the file's reference link). In this way, you will not lose already applied link references to that image file in other documents. The reason for this intended behaviour is the  conversion of any image file into JPG in order to reduce the file size and save some disk space. 
 
@@ -31,9 +31,9 @@ It may be a bit confusing that the file extension is retained, when a TIFF or a 
 ## Change DPI
 This set of scripts changes the DPI of the selected images to a chosen value:
 
-* a pre-defined DPI of 72 ("**Change DPI to 72**")
-* a pre-defined DPI of 90 ("**Change DPI to 90**")
-* a freely entered DPI value ("**Change DPI to XY**")
+* a pre-defined DPI of 72 ("**Change DPI to 72.scpt**")
+* a pre-defined DPI of 90 ("**Change DPI to 90.scpt**")
+* a freely entered DPI value ("**Change DPI to XY.scpt**")
 
 
 <center>
