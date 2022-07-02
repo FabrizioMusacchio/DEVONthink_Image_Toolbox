@@ -2,8 +2,8 @@
 
 This is a collection of Appelscripts for processing images in DEVONthink. It contains the following script sets:
 
-* [JPG compression](#jpg_compression)
-* [Change DPI](#change_dpi)
+* [JPG compression](#jpg-compression)
+* [Change DPI](#change-dpi)
 
 
 
