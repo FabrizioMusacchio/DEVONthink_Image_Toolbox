@@ -8,7 +8,7 @@ This is a collection of AppleScripts for processing images in DEVONthink. It con
 * [Change DPI](#change-dpi) - a DPI changer and JPG converter
 
 <p align="center">
-<img src="Screenshots/DT_Image Toolbox logo.png" style="width: 70%;"></a>
+<img src="Screenshots/DT_Image Toolbox logo.png" style="width: 50%;"></a>
 </p>
 
 ## Image auto-rename and annotate
@@ -21,9 +21,9 @@ renames the selected images according the scheme `img######`, i.e., the new name
 
 The original file names will be stored as a Finder comment and the script offers the following options:  
 
-<div style="text-align: center;">
+<p align="center">
 <a href="Screenshots/Image auto-rename and annotate menu.png"><img src="Screenshots/Image auto-rename and annotate menu.png" style="width: 70%;"></a>
-</div>
+</p>
 
 **Replace with current image name**
 : The current comment will be replaced by the current image name. 
@@ -72,9 +72,9 @@ The scripts
 
 generate a set of image links, arranged in a desired grid size. Available grid options are:
 
-<div style="text-align: center;">
+<p align="center">
 <a href="Screenshots/Generate image set.png"><img src="Screenshots/Generate image set.png" style="width: 70%;"></a>
-</div>
+</p>
 
 **grid 1 (100% width)**
 : Arranges one image per row with an image width of 100%.
@@ -114,12 +114,13 @@ The Markdown version (**Generate image set (Markdown).applescript**) generates M
 ```
 
 
-<div style='text-align: center;'><a href='Screenshots/img058627.png'><img src='Screenshots/img058627.png' style='width: 32%;'></a>
+<p align="center">
+<a href='Screenshots/img058627.png'><img src='Screenshots/img058627.png' style='width: 32%;'></a>
 <a href='Screenshots/img058628.png'><img src='Screenshots/img058628.png' style='width: 32%;'></a>
 <a href='Screenshots/img058629.png'><img src='Screenshots/img058629.png' style='width: 32%;'></a>
 
 **Left**: Enso 0 – **Middle**: Enso 1 – **Right**: Enso 2
-</div>
+</p>
 
 I think, the Markdown version only makes sense when it is used in combination with the [Image auto-rename and annotate](#image-auto-rename-and-annotate) script. Otherwise the image reference links could become too long and the unambiguity of the references is not ensured. 
 
@@ -154,12 +155,12 @@ However, the original filename and file extension are retained as well as the fi
 
 It could be a bit confusing that the file extension is retained, when a TIFF or a PNG image is converted into a JPG image. However, any converted image file will be indeed a JPG, which can be cross-checked, e.g., in the info pane of the _Preview_ app:
 
-<div style="text-align: center;">
+<p align="center">
 <a href="Screenshots/JPG compression 1.png"><img src="Screenshots/JPG compression 1.png" style="width: 41%;"></a>
 <a href="Screenshots/JPG compression 2.png"><img src="Screenshots/JPG compression 2.png" style="width: 49%;"></a><br>
 
 <b>Left</b>: The info pane of a converted TIFF in DEVONthink's inspector, that still shows the file as TIFF. <b>Right</b>: The info pane in macOS' _Preview_ app for the same file, which correctly identifies the file as a JPG.
-</div>
+</p>
 
 
 ## Change DPI
@@ -170,12 +171,12 @@ This set of scripts changes the DPI of the selected images to a chosen value:
 * a freely entered DPI value ("**Change DPI to XY.applescript**")
 
 
-<div style="text-align: center;">
+<p align="center">
 <a href="Screenshots/Change DPI 1.png"><img src="Screenshots/Change DPI 1.png" style="width: 49%;"></a>
 <a href="Screenshots/Change DPI 2.png"><img src="Screenshots/Change DPI 2.png" style="width: 49%;"></a>
 
 <b>Left</b>: The info pane of a JPG file with 72 DPI. <b>Right</b>: The info pane of the same file after a conversion to 90 DPI.
-</div>
+</p>
 
 ### Remark
 As for the JPG compression scripts, these scripts do not distinguish between JPG and other image file formats and will convert any image file into JPG (if it isn't a JPG yet).
