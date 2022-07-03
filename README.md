@@ -2,10 +2,61 @@
 
 This is a collection of Appelscripts for processing images in DEVONthink. It contains the following script sets:
 
-* [JPG compression](#jpg-compression)
-* [Change DPI](#change-dpi)
+* [ Image auto-rename and annotate](#image-auto-rename-and-annotate) – renames images according the scheme `img######` and stores the original file name as a comment
+* [JPG compression](#jpg-compression) – a JPG compressor and JPG converter
+* [Change DPI](#change-dpi) - a DPI changer and JPG converter
 
 
+## Image auto-rename and annotate
+The script 
+
+* `Image auto-rename and annotate.applescript`
+
+renames the selected images according the scheme `img######`, i.e., the new names will consist of "`img`" and a number. The number will be increased every time the script is run, so that each renamed image file gets a **unique file name**. This reduces file name ambiguity which, e.g., becomes a crucial point while using DEVNthink's _WikiLinks_ feature. It also makes images better distinguishable from other files while searching.
+
+
+The original file names will be stored as a Finder comment and the script offers the following options:  
+
+<center>
+<a href="Screenshots/Image auto-rename and annotate menu.png"><img src="Screenshots/Image auto-rename and annotate menu.png" style="width: 70%;"></a>
+</center>
+
+**Replace with current image name**
+: The current comment will be replaced by the current image name. 
+
+**Replace with custom text**
+: The current comment will be replaced by a custom text.
+
+**Replace with custom text + increasing number**
+: The current comment will be replaced by a custom text and an increasing number will be attached to that text.
+
+**Don't replace current annotation**
+: The current comment will not be replaced.
+
+**Remove current annotation and leave empty**
+: Removes the current comment and leaves it empty.
+
+**Add current image name**
+: The current image name will be added to the current comment.
+
+**Add custom text**
+: A custom text will be added to the current comment.
+
+**Add custom text + increasing number**
+: A custom text with an attached increasing number will be added to the current comment.
+
+**To make the script work**, you first have to create an empty document (of any type; however, the script is only tested for Markdown files) in DEVONthink. Copy the reference link of that file and extract the UUID part of the link, i.e., remove "`x-devonthink-item://`" from the link text, e.g., 
+
+<center>
+
+`x-devonthink-item://58111DBA-42BA-4EE1-A251-FAF27C3FDA81` $\rightarrow$ `58111DBA-42BA-4EE1-A251-FAF27C3FDA81`
+
+</center>
+
+Insert the UUID into the `UUID_of_imager_counter` variable within the script. Do not edit or store anything else within the created file: It serves to store the running number for renaming the images. The variable `leading_zeros` controls the number of leading zeros of that counter.
+
+### Acknowledgement
+The script uses a function to add leading zeros to the file names (`addLeadingZerosToNumber`). This function taken from [developer.apple.com](https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html). 
 
 
 
