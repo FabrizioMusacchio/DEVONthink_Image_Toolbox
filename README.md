@@ -151,7 +151,7 @@ This set of scripts compresses the selected images to a chosen compression level
 
 The scripts are written in such a way, that they do not distinguish between JPG and other image file formats (PNG, TIFF, ...). Any chosen image file will be converted into JPG (if it isn't a JPG yet) and compressed to the chosen compression level. The reason for this intended behaviour is to reduce the file size and thus save some disk space by using the JPG format. 
 
-However, the original filename and file extension are retained as well as the file's `UUID` (_DEVONthink_'s internal file ID, that also serves as the file's reference link). In this way, you will not lose already applied link references to that image file in other documents. 
+However, the original filename and file extension are retained as well as the file's UUID (_DEVONthink_'s internal file ID, that also serves as the file's reference link). In this way, you will not lose already applied link references to that image file in other documents. 
 
 It could be a bit confusing that the file extension is retained, when a TIFF or a PNG image is converted into a JPG image. However, any converted image file will be indeed a JPG, which can be cross-checked, e.g., in the info pane of the _Preview_ app:
 
