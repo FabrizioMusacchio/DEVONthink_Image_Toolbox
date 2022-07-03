@@ -1,6 +1,6 @@
 # DEVONthink Image Toolbox
 
-This is a collection of AppleScripts for processing images in DEVONthink. It contains the following script sets:
+This is a collection of AppleScripts for handling images in DEVONthink. It contains the following script sets:
 
 * [Image auto-rename and annotate](#image-auto-rename-and-annotate) – renames images according the scheme `img######` and stores the original file name as a comment
 * [Generate image set](#generate-image-set) – generates a set of image links, arranged in a desired grid size (1, 2, 3, 4, ... image(s) per row)
