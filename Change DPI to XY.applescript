@@ -1,6 +1,7 @@
 -- Change the DPI of an image
--- Author: Fabrizio Musacchio (hello@fabriziomusacchio.com)
--- Date: Feb 3, 2022
+-- 
+-- author: Fabrizio Musacchio (https://www.fabriziomusacchio.com)
+-- date: Feb 3, 2022
 
 tell application id "DNtp"
 	try
