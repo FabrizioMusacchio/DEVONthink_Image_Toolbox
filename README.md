@@ -7,9 +7,9 @@ This is a collection of AppleScripts for processing images in DEVONthink. It con
 * [JPG compression](#jpg-compression) – a JPG compressor and JPG converter
 * [Change DPI](#change-dpi) - a DPI changer and JPG converter
 
-<div style="text-align: center;">
+<p align="center">
 <img src="Screenshots/DT_Image Toolbox logo.png" style="width: 70%;"></a>
-</div>
+</p>
 
 ## Image auto-rename and annotate
 The script 
