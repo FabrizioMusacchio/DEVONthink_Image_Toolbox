@@ -1,12 +1,15 @@
 # DEVONthink Image Toolbox
 
-This is a collection of Appelscripts for processing images in DEVONthink. It contains the following script sets:
+This is a collection of AppleScripts for processing images in DEVONthink. It contains the following script sets:
 
 * [Image auto-rename and annotate](#image-auto-rename-and-annotate) – renames images according the scheme `img######` and stores the original file name as a comment
 * [Generate image set](#generate-image-set) – generates a set of image links, arranged in a desired grid size (1, 2, 3, 4, ... image(s) per row)
 * [JPG compression](#jpg-compression) – a JPG compressor and JPG converter
 * [Change DPI](#change-dpi) - a DPI changer and JPG converter
 
+<div style="text-align: center;">
+<img src="Screenshots/DT_Image Toolbox logo.png" style="width: 70%;"></a>
+</div>
 
 ## Image auto-rename and annotate
 The script 
@@ -18,9 +21,9 @@ renames the selected images according the scheme `img######`, i.e., the new name
 
 The original file names will be stored as a Finder comment and the script offers the following options:  
 
-<center>
+<div style="text-align: center;">
 <a href="Screenshots/Image auto-rename and annotate menu.png"><img src="Screenshots/Image auto-rename and annotate menu.png" style="width: 70%;"></a>
-</center>
+</div>
 
 **Replace with current image name**
 : The current comment will be replaced by the current image name. 
@@ -49,11 +52,11 @@ The original file names will be stored as a Finder comment and the script offers
 ### Required preparation for the script
 To make the script work, you first have to create an empty document in DEVONthink (of any kind; however, the script is only tested for Markdown files). Copy the reference link of that file and extract the UUID part of the link, i.e., remove "`x-devonthink-item://`" from the link text, e.g., 
 
-<center>
+<div style="text-align: center;">
 
 `x-devonthink-item://58111DBA-42BA-4EE1-A251-FAF27C3FDA81` $\rightarrow$ `58111DBA-42BA-4EE1-A251-FAF27C3FDA81`
 
-</center>
+</div>
 
 Insert the UUID into the `UUID_of_imager_counter` variable within the script. Do not edit or store anything else within the created file: It serves to store the running number for renaming the images. The variable `leading_zeros` controls the number of leading zeros of that counter.
 
@@ -69,9 +72,9 @@ The scripts
 
 generate a set of image links, arranged in a desired grid size. Available grid options are:
 
-<center>
+<div style="text-align: center;">
 <a href="Screenshots/Generate image set.png"><img src="Screenshots/Generate image set.png" style="width: 70%;"></a>
-</center>
+</div>
 
 **grid 1 (100% width)**
 : Arranges one image per row with an image width of 100%.
@@ -88,7 +91,7 @@ generate a set of image links, arranged in a desired grid size. Available grid o
 **"+ caption" options**
 : The "+ caption" option extracts the image annotations from the images' Finder comments and adds them (if available) as captions under each image. In the HTML version, this option is only available for image widths $\geq$ 25%.
 
-The generated sets will be stored in the clipboard and can be pasted into the desired Markdown document.
+The generated sets will be saved to the clipboard and can be pasted into the desired Markdown document.
 
 The image links are generated in such a way, that you can click on them and the corresponding image file opens (i.e, they additionally contain a link to themselves). The reason for this behavior is to enable the images to be opened, e.g., in a new tab in DEVONthink and to enable the full-size view of the images in DTTG.
 
@@ -145,17 +148,18 @@ This set of scripts compresses the selected images to a chosen compression level
 * a pre-defined level of 100% ("**JPG compress 100%.applescript**"), e.g., to reset any previous compression
 * a freely entered level ("**JPG compress XY%.applescript**")
 
-The scripts are written in such a way that they do not distinguish between JPG and other image file formats (PNG, TIFF, ...). Any chosen image file will be converted into JPG (if it isn't a JPG yet) and compressed to the chosen compression level. However, the original filename and file extension are retained as well as the file's `uuid` (DEVONthink's internal ID for that file, which also serves as the file's reference link). In this way, you will not lose already applied link references to that image file in other documents. The reason for this intended behaviour is the  conversion of any image file into JPG in order to reduce the file size and save some disk space. 
+The scripts are written in such a way, that they do not distinguish between JPG and other image file formats (PNG, TIFF, ...). Any chosen image file will be converted into JPG (if it isn't a JPG yet) and compressed to the chosen compression level. The reason for this intended behaviour is to reduce the file size and thus save some disk space by using the JPG format. 
 
-### Remark 
-It may be a bit confusing that the file extension is retained, when a TIFF or a PNG is converted into a JPG. However, any converted image file will be indeed a JPG, which can be cross-checked, e.g., in the info pane of the _Preview_ app.
+However, the original filename and file extension are retained as well as the file's `UUID` (_DEVONthink_'s internal file ID, that also serves as the file's reference link). In this way, you will not lose already applied link references to that image file in other documents. 
 
-<center>
+It could be a bit confusing that the file extension is retained, when a TIFF or a PNG image is converted into a JPG image. However, any converted image file will be indeed a JPG, which can be cross-checked, e.g., in the info pane of the _Preview_ app:
+
+<div style="text-align: center;">
 <a href="Screenshots/JPG compression 1.png"><img src="Screenshots/JPG compression 1.png" style="width: 41%;"></a>
-<a href="Screenshots/JPG compression 2.png"><img src="Screenshots/JPG compression 2.png" style="width: 49%;"></a>
+<a href="Screenshots/JPG compression 2.png"><img src="Screenshots/JPG compression 2.png" style="width: 49%;"></a><br>
 
 <b>Left</b>: The info pane of a converted TIFF in DEVONthink's inspector, that still shows the file as TIFF. <b>Right</b>: The info pane in macOS' _Preview_ app for the same file, which correctly identifies the file as a JPG.
-</center>
+</div>
 
 
 ## Change DPI
@@ -166,12 +170,12 @@ This set of scripts changes the DPI of the selected images to a chosen value:
 * a freely entered DPI value ("**Change DPI to XY.applescript**")
 
 
-<center>
+<div style="text-align: center;">
 <a href="Screenshots/Change DPI 1.png"><img src="Screenshots/Change DPI 1.png" style="width: 49%;"></a>
 <a href="Screenshots/Change DPI 2.png"><img src="Screenshots/Change DPI 2.png" style="width: 49%;"></a>
 
-<b>Left</b>: The info pane of  JPG file with a DPI of 72 . <b>Right</b>: The info pane of the same file after a DPI conversion 90.
-</center>
+<b>Left</b>: The info pane of a JPG file with 72 DPI. <b>Right</b>: The info pane of the same file after a conversion to 90 DPI.
+</div>
 
 ### Remark
-As for the JPG compression scripts, this scripts do not not distinguish between JPG and other image file formats and will convert any image file into JPG (if it isn't a JPG yet).
+As for the JPG compression scripts, these scripts do not distinguish between JPG and other image file formats and will convert any image file into JPG (if it isn't a JPG yet).
