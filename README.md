@@ -12,7 +12,7 @@ The script
 
 * **Image auto-rename and annotate.applescript**
 
-renames the selected images according the scheme `img######`, i.e., the new names will consist of "`img`" and a number. The number will be increased every time the script is run. In this way, each renamed image file gets a **unique file name**. This reduces file name ambiguity which, e.g., becomes a crucial point while using DEVNthink's _WikiLinks_ feature. It also makes images better distinguishable from other files while searching.
+renames the selected images according the scheme `img######`, i.e., the new names will consist of "`img`" and a number. The number will be increased every time the script is run and for every renamed image. In this way, each renamed image file gets a **unique file name**. This reduces file name ambiguity which, e.g., becomes a crucial point while using DEVNthink's _WikiLinks_ feature. It also makes images better distinguishable from other files while searching.
 
 
 The original file names will be stored as a Finder comment and the script offers the following options:  
@@ -46,7 +46,7 @@ The original file names will be stored as a Finder comment and the script offers
 : A custom text with an attached increasing number will be added to the current comment.
 
 ### Required preparation for the script
-To make the script work, you first have to create an empty document in DEVONthink (any type; however, the script is only tested for Markdown files). Copy the reference link of that file and extract the UUID part of the link, i.e., remove "`x-devonthink-item://`" from the link text, e.g., 
+To make the script work, you first have to create an empty document in DEVONthink (of any kind; however, the script is only tested for Markdown files). Copy the reference link of that file and extract the UUID part of the link, i.e., remove "`x-devonthink-item://`" from the link text, e.g., 
 
 <center>
 
