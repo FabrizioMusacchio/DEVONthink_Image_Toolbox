@@ -10,7 +10,7 @@ This is a collection of Appelscripts for processing images in DEVONthink. It con
 ## Image auto-rename and annotate
 The script 
 
-* `Image auto-rename and annotate.applescript`
+* **Image auto-rename and annotate.applescript**
 
 renames the selected images according the scheme `img######`, i.e., the new names will consist of "`img`" and a number. The number will be increased every time the script is run. In this way, each renamed image file gets a **unique file name**. This reduces file name ambiguity which, e.g., becomes a crucial point while using DEVNthink's _WikiLinks_ feature. It also makes images better distinguishable from other files while searching.
 
