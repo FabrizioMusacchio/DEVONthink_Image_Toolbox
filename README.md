@@ -2,7 +2,8 @@
 
 This is a collection of Appelscripts for processing images in DEVONthink. It contains the following script sets:
 
-* [ Image auto-rename and annotate](#image-auto-rename-and-annotate) – renames images according the scheme `img######` and stores the original file name as a comment
+* [Image auto-rename and annotate](#image-auto-rename-and-annotate) – renames images according the scheme `img######` and stores the original file name as a comment
+* [Generate image set](#generate-image-set) – generates a set of image links, arranged in a desired grid size (1, 2, 3, 4, ... image(s) per row)
 * [JPG compression](#jpg-compression) – a JPG compressor and JPG converter
 * [Change DPI](#change-dpi) - a DPI changer and JPG converter
 
@@ -59,6 +60,81 @@ Insert the UUID into the `UUID_of_imager_counter` variable within the script. Do
 ### Acknowledgement
 The script uses a function to add leading zeros to the file names (`addLeadingZerosToNumber`). This function taken from [developer.apple.com](https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html). 
 
+
+## Generate image set
+The scripts
+
+* **Generate image set (Markdown).applescript**
+* **Generate image set (HTML).applescript**
+
+generate a set of image links, arranged in a desired grid size. Available grid options are:
+
+<center>
+<a href="Screenshots/Generate image set.png"><img src="Screenshots/Generate image set.png" style="width: 70%;"></a>
+</center>
+
+**grid 1 (100% width)**
+: Arranges one image per row with an image width of 100%.
+
+**grid 2 (50% width)**
+: Arranges two images per row with an image width of 49%.
+
+**grid 3 (33% width)**
+: Arranges three images per row with an image width of 32%.
+
+**enter individual width**
+: Arranges as many images per row, as the custom entered image width allows, i.e., 100//entered value ("//" = integer division). E.g., a width of 24% allows four images per row, a width of 19% five images per row, and so forth. 
+
+**"+ caption" options**
+: The "+ caption" option extracts the image annotations from the images' Finder comments and adds them (if available) as captions under each image. In the HTML version, this option is only available for image widths $\geq$ 25%.
+
+The generated sets will be stored in the clipboard and can be pasted into the desired Markdown document.
+
+The image links are generated in such a way, that you can click on them and the corresponding image file opens (i.e, they additionally contain a link to themselves). The reason for this behavior is to enable the images to be opened, e.g., in a new tab in DEVONthink and to enable the full-size view of the images in DTTG.
+
+### Markdown version
+The Markdown version (**Generate image set (Markdown).applescript**) generates Markdown image links, e.g.:
+
+```markdown
+<center>
+
+[![img058627]] 
+[![img058628]] 
+[![img058629]] 
+
+**Left**: Enso 0 – **Middle**: Enso 1 – **Right**: Enso 2
+</center>
+
+[img058627]: x-devonthink-item://80581B4F-2509-4ADE-9720-B0C77A5B758A style="width:32%;"
+[img058628]: x-devonthink-item://440D0398-C1F1-4F7A-BD6B-1EA212294404 style="width:32%;"
+[img058629]: x-devonthink-item://4C074346-878B-463C-A000-3CC824420BB3 style="width:32%;"
+```
+
+
+<div style='text-align: center;'><a href='Screenshots/img058627.png'><img src='Screenshots/img058627.png' style='width: 32%;'></a>
+<a href='Screenshots/img058628.png'><img src='Screenshots/img058628.png' style='width: 32%;'></a>
+<a href='Screenshots/img058629.png'><img src='Screenshots/img058629.png' style='width: 32%;'></a>
+
+**Left**: Enso 0 – **Middle**: Enso 1 – **Right**: Enso 2
+</div>
+
+I think, the Markdown version only makes sense when it is used in combination with the [Image auto-rename and annotate](#image-auto-rename-and-annotate) script. Otherwise the image reference links could become too long and the unambiguity of the references is not ensured. 
+
+
+### HTML version
+The HTML version (**Generate image set (HTML).applescript**) generates HTML image links, e.g.:
+
+```html
+<div style='text-align: center;'>
+<a href='x-devonthink-item://80581B4F-2509-4ADE-9720-B0C77A5B758A'><img src='x-devonthink-item://80581B4F-2509-4ADE-9720-B0C77A5B758A' style='width: 32%;'></a>
+<a href='x-devonthink-item://440D0398-C1F1-4F7A-BD6B-1EA212294404'><img src='x-devonthink-item://440D0398-C1F1-4F7A-BD6B-1EA212294404' style='width: 32%;'></a>
+<a href='x-devonthink-item://4C074346-878B-463C-A000-3CC824420BB3'><img src='x-devonthink-item://4C074346-878B-463C-A000-3CC824420BB3' style='width: 32%;'></a>
+
+**Left**: Enso 0 – **Middle**: Enso 1 – **Right**: Enso 2
+</div>
+```
+
+The generated image set is rendered in the same way as the Markdown example above.  
 
 
 ## JPG compression
