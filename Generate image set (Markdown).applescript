@@ -15,17 +15,17 @@ Please select a grid size, i.e., how many images to show per row. The '+ caption
 if TheGridChoice is false then
 	error number -128
 else if text of TheGridChoice is {"enter individual width"} then
-	set dialogResult to display dialog Â
-		"Please enter an image width (in %)" buttons {"Cancel", "OK"} Â
-		default button "OK" cancel button Â
+	set dialogResult to display dialog ï¿½
+		"Please enter an image width (in %)" buttons {"Cancel", "OK"} ï¿½
+		default button "OK" cancel button ï¿½
 		"Cancel" default answer ("24") with title "Choose image width"
 	set InsertCaption to false --false true
 	set TheWidth to text returned of dialogResult
 	if dialogResult is false then error number -128
 else if text of TheGridChoice is {"enter individual width + caption"} then
-	set dialogResult to display dialog Â
-		"Please enter an image width (in %)" buttons {"Cancel", "OK"} Â
-		default button "OK" cancel button Â
+	set dialogResult to display dialog ï¿½
+		"Please enter an image width (in %)" buttons {"Cancel", "OK"} ï¿½
+		default button "OK" cancel button ï¿½
 		"Cancel" default answer ("24") with title "Choose image width"
 	set InsertCaption to true --false true
 	set TheWidth to text returned of dialogResult
@@ -76,9 +76,9 @@ tell application id "DNtp"
 				
 				if TheWidth is greater than 49 then
 					set TheGridSize to 1
-				else if TheWidth ² 49 and TheWidth > 32 then
+				else if TheWidth ï¿½ 49 and TheWidth > 32 then
 					set TheGridSize to 2
-				else if TheWidth ² 32 and TheWidth > 25 then
+				else if TheWidth ï¿½ 32 and TheWidth > 25 then
 					set TheGridSize to 3
 				else
 					set TheGridSize to 999
@@ -117,24 +117,26 @@ tell application id "DNtp"
 								set TheReferences to TheReferences & "[" & TheImageName & "]: " & TheImageURL & " style=\"width:" & TheWidth & "%;\"
 "
 								if TheGridSize is 3 then
-									set TheCaptionTmp to TheCaptionTmp & " Ð **Middle**: " & TheCaption
+									set TheCaptionTmp to TheCaptionTmp & " ï¿½ **Middle**: " & TheCaption
 								end if
 							end if
 						else
 							set TheImageLink to TheImageLink & "[![" & TheImageName & "]] "
 							set TheReferences to TheReferences & "[" & TheImageName & "]: " & TheImageURL & " style=\"width:" & TheWidth & "%;\"
 "
-							set TheCaptionTmp to TheCaptionTmp & " Ð **Right**: " & TheCaption
+							set TheCaptionTmp to TheCaptionTmp & " ï¿½ **Right**: " & TheCaption
 							set TheImageLink to TheImageLink & TheCaptionTmp & "
 </center>
 
 " & TheReferences
 						end if
 						if RunCounter = NumberOfRecords and RunCounter mod TheGridSize is not 0 then
-							set TheImageLink to TheImageLink & TheCaptionTmp & "
-</center>
+							set TheImageLink to TheImageLink & TheCaptionTmp
 
-" & TheReferences
+							--							set TheImageLink to TheImageLink & TheCaptionTmp & "
+							--</center>
+							--
+							--" & TheReferences
 							
 						end if
 					else
@@ -181,7 +183,7 @@ tell application id "DNtp"
 						set TheReferences to TheReferences & "[" & TheImageName & "]: " & TheImageURL & " style=\"width:" & TheWidth & "%;\"
 "
 						if InsertCaption then
-							set TheCaptionTmp to TheCaptionTmp & " Ð " & RunCounter & ". " & TheCaption
+							set TheCaptionTmp to TheCaptionTmp & " ï¿½ " & RunCounter & ". " & TheCaption
 						end if
 					end if
 					if RunCounter is NumberOfRecords then
