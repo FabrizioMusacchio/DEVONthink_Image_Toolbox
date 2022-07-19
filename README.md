@@ -143,6 +143,17 @@ The HTML version (**Generate image set (HTML).applescript**) generates HTML imag
 
 The generated image set is rendered in the same way as the Markdown example above.  
 
+### Use-case example
+I mostly use these scripts to add image galleries (some kind of) to my Markdown files.
+
+
+<p align="center">
+<a href='Screenshots/Image set example (edit view).jpg'><img src='Screenshots/Image set example (edit view).jpg' style='width: 100%;'></a>
+<a href='Screenshots/Image set example (preview).jpg'><img src='Screenshots/Image set example (preview).jpg' style='width: 100%;'></a>
+
+Edit view (bottom) and preview (top) of a Markdown file containing an image gallery (some kind of).
+</p>
+
 
 ## JPG compression
 This set of scripts compresses the selected images to a chosen compression level:
