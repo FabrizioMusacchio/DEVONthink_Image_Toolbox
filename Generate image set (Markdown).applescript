@@ -20,8 +20,7 @@ else if text of TheGridChoice is {"enter individual width"} then
 	set TheWidth to text returned of dialogResult
 	if dialogResult is false then error number -128
 else if text of TheGridChoice is {"enter individual width + caption"} then
-	set dialogResult to display dialog Â
-		"Please enter an image width (in %)" buttons {"Cancel", "OK"} default button "OK" cancel button "Cancel" default answer ("24") with title "Choose image width"
+	set dialogResult to display dialog "Please enter an image width (in %)" buttons {"Cancel", "OK"} default button "OK" cancel button "Cancel" default answer ("24") with title "Choose image width"
 	set InsertCaption to true --false true
 	set TheWidth to text returned of dialogResult
 	if dialogResult is false then error number -128

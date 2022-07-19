@@ -7,10 +7,7 @@ tell application id "DNtp"
 	try
 		set this_selection to the selection
 		if this_selection is {} then error "Please select some images."
-		set dialogResult to display dialog Â
-			"Please enter a JPEG compression level (in %)." buttons {"Cancel", "OK"} Â
-			default button "OK" cancel button Â
-			"Cancel" default answer ("70") with title "Choose JPEG compression"
+		set dialogResult to display dialog "Please enter a JPEG compression level (in %)." buttons {"Cancel", "OK"} default button "OK" cancel button "Cancel" default answer ("70") with title "Choose JPEG compression"
 		set theCompression to text returned of dialogResult
 		
 		

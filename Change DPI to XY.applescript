@@ -7,10 +7,7 @@ tell application id "DNtp"
 	try
 		set this_selection to the selection
 		if this_selection is {} then error "Please select some images."
-		set dialogResult to display dialog Â
-			"Please enter a DPI value (e.g., 72, 90, 120, ...)." buttons {"Cancel", "OK"} Â
-			default button "OK" cancel button Â
-			"Cancel" default answer ("90") with title "Choose DPI value"
+		set dialogResult to display dialog "Please enter a DPI value (e.g., 72, 90, 120, ...)." buttons {"Cancel", "OK"} default button "OK" cancel button "Cancel" default answer ("90") with title "Choose DPI value"
 		set theDPI to text returned of dialogResult
 		repeat with this_item in this_selection
 			if the type of this_item is equal to picture then
