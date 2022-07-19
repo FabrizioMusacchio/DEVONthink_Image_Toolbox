@@ -95,7 +95,8 @@ generate a set of image links, arranged in a desired grid size. Available grid o
 
 The generated sets will be saved to the clipboard and can be pasted into the desired Markdown document.
 
-The image links are generated in such a way, that you can click on them and the corresponding image file opens (i.e, they additionally contain a link to themselves). The reason for this behavior is to enable the images to be opened, e.g., in a new tab in DEVONthink and to enable the full-size view of the images in DTTG.
+The image links contain an additional link to the corresponding image file. This enables the opening of the images in a new tab in _DEVONthink_ and the full-size view of the images in _DEVONthink To Go_.
+
 
 ### Markdown version
 The Markdown version (**Generate image set (Markdown).applescript**) generates Markdown image links, e.g.:
