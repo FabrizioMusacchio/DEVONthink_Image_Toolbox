@@ -18,7 +18,7 @@ The script
 
 * **Image auto-rename and annotate.applescript**
 
-renames the selected images according the scheme `img######`, i.e., the new names will consist of "`img`" and a number. The number will be increased every time the script is run and for every renamed image. In this way, each renamed image file gets a **unique file name**. This reduces file name ambiguity which, e.g., becomes a crucial point while using DEVNthink's _WikiLinks_ feature. It also makes images better distinguishable from other files while searching.
+renames the selected images according the scheme `img######`, i.e., the new names will consist of "`img`" and a number. The number will be increased every time the script is run and for every renamed image. In this way, each renamed image file gets a **unique file name**. This reduces file name ambiguity which, e.g., becomes a crucial point while using DEVNthink's _WikiLinks_ feature. It also makes images better distinguishable from other files in _DEVONthink_'s  search.
 
 
 The original file names will be stored as a Finder comment and the script offers the following options:  
@@ -63,7 +63,7 @@ To make the script work, you first have to create an empty document in DEVONthin
 Insert the UUID into the `UUID_of_imager_counter` variable within the script. Do not edit or store anything else within the created file: It serves to store the running number for renaming the images. The variable `leading_zeros` controls the number of leading zeros of that counter.
 
 ### Acknowledgement
-The script uses a function to add leading zeros to the file names (`addLeadingZerosToNumber`). This function taken from [developer.apple.com](https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html). 
+The script uses a function to add leading zeros to the file names (`addLeadingZerosToNumber`). This function is taken from [developer.apple.com](https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ManipulateNumbers.html). 
 
 
 ## Generate image set
