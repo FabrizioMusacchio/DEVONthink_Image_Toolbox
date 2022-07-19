@@ -18,7 +18,7 @@ The script
 
 * **Image auto-rename and annotate.applescript**
 
-renames the selected images according the scheme `img######`, i.e., the new names will consist of "`img`" and a number. The number will be increased every time the script is run and for every renamed image. In this way, each renamed image file gets a **unique file name**. This reduces file name ambiguity which, e.g., becomes a crucial point while using DEVNthink's _WikiLinks_ feature. It also makes images better distinguishable from other files in _DEVONthink_'s  search.
+renames the selected images according the scheme `img######`, i.e., the new names will consist of "`img`" and a number. The number will be increased every time the script is run and for every renamed image. In this way, each renamed image file gets a **unique file name**. This reduces file name ambiguity which, e.g., becomes a crucial point while using DEVONthink's _WikiLinks_ feature. It also makes images better distinguishable from other files in _DEVONthink_'s  search.
 
 
 The original file names will be stored as a Finder comment and the script offers the following options:  
