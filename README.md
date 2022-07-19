@@ -11,6 +11,8 @@ This is a collection of AppleScripts for handling images in DEVONthink. It conta
 <img src="Screenshots/DT_Image Toolbox logo.png" style="width: 50%;"></a>
 </p>
 
+<a name="image-auto-rename-and-annotate"></a>
+
 ## Image auto-rename and annotate
 The script 
 
